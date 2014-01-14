@@ -1,0 +1,35 @@
+body{
+	width: 1000px;
+	background-color: #FFFF66;
+	background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/inscription.jpg);
+	background-position: right;
+	background-repeat: repeat-y;
+}
+h1{
+	color:#990000;
+	font-family: Georgia, Caflisch Script, Adobe Poetica, Sanvito, Ex Ponto, Snell Roundhand, Zapf-Chancery, cursive;
+	font-weight:bold;
+	text-align: center;
+}
+h2{
+	color:#FF0033;
+	font-family: Georgia, Caflisch Script, Adobe Poetica, Sanvito, Ex Ponto, Snell Roundhand, Zapf-Chancery, cursive;
+	font-weight:bold;
+	text-align: center;
+}
+form{
+	border: 1px solid orange;
+	padding:10px;
+	background-color:rgba(255, 146, 0, 0.6);
+}
+p{
+	width:400px;
+	padding-left: 305px;
+	text-align: left;
+	vertical-align: top;
+}
+label.left{
+	float: left;
+	margin-left: -105px;
+	font-weight:bold;
+}
