@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title><br>Bougez <br/>
+	<title>Bougez <br/>
 	    Vos Papilles !</title>
 
 	<link rel="stylesheet" media="screen" href="C:/Users/sofia/Desktop/projet/menuPrincipal/deco.css">
@@ -19,6 +19,7 @@
 
 
 <body id="css-zen-garden">
+<form method="get" action = "GestionCommandes">
 <div class="page-wrapper">
 
 	<section class="intro" id="zen-intro">
@@ -50,11 +51,9 @@
 		</div>
 
 		<div class="participation" id="zen-participation" role="article">
-			<h3> Espace Restaurateur</h3>
-			<p>  <a href= "EspaceRestaurateur?op=nouveauRestaurant"> Ouvrir un compte <a></p>
-			<br> Référencez votre restaurant sur notre site internet <br>
-			<p>  <a href= "EspaceRestaurateur?op=connexion"> S'authentifier <a></p>
-			<br> Gérez votre restaurant (si vous l'avez déjà référencé) <br>
+			<h3>Authentification: Espace Restaurateur</h3>
+			<p>  <a href= "GestionCommandes?redirection=connexion&page=index"> Ouvrir son compte <a></p>"Restaurant?choix=creerUneCommande&page=menu"
+			<p>  <a href= "GestionCommandes?redirection=inscription&page=index"> Créer un nouveau compte <a></p>
 		</div>
 
 	
@@ -91,5 +90,6 @@
 <div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
 <div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
 
+</form>
 </body>
 </html>
