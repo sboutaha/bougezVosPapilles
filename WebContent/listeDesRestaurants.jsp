@@ -38,11 +38,13 @@
 <% for (Restaurant_itf r : listeRestaurants) { %>
 		<div class="preamble" id="zen-preamble" role="article">
 			<h3><%=r.getNom()%></h3>
+			<%if(r.getDescription()!=null) {%>
 			<p><%=r.getDescription()%> </p>
-			<a href="GestionCommande?page=listedesRestaurants&redirection=menu&nomRestaurant =<%=r.getNom()%>"> Consulter le menu du restaurant <%=r.getNom()%> </a>
+			<%} %>
+			<a href="GestionCommande?page=listedesRestaurants&redirection=menu&nomRestaurant =<%=r.getId()%>"> Consulter le menu du restaurant <%=r.getNom()%> </a>
 			<br/>
 			<br/>
-			<a href="GestionCommande?page=listedesRestaurants&redirection=commande&nomRestaurant =<%=r.getNom()%>"> Effectuer une commande au restaurant <%=r.getNom()%> </a>
+			<a href="GestionCommande?page=listedesRestaurants&redirection=commande&nomRestaurant =<%=r.getId()%>"> Effectuer une commande au restaurant <%=r.getNom()%> </a>
 		</div>
 	</section>
 	<% } %>

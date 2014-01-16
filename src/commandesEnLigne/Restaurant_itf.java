@@ -3,7 +3,7 @@ package commandesEnLigne;
 import java.util.List;
 
 
-public interface Restaurant_itf {
+public interface Restaurant_itf{
 	
 	public int getId();
 	public void setId(int _id);

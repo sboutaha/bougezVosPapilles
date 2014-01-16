@@ -18,8 +18,8 @@ public interface Restaurant_itf {
 	public int getNbPlaces();
 	public void setNbPlaces(int n);
 	
-	public int getGerants();
-	public void setGerants(List<Utilisateur_itf> u);
-	public boolean addGerant(Utilisateur_itf p);
-	public boolean removePlat(Utilisateur_itf p);
+	public List<Gerant_itf> getGerants();
+	public void setGerants(List<Gerant_itf> u);
+	public boolean addGerant(Gerant_itf p);
+	public boolean removeGerant(Gerant_itf p);
 }

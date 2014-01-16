@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>GestionCommandes</display-name>
+    <servlet-name>GestionCommandes</servlet-name>
+    <servlet-class>espaceUtilisateur.GestionCommandes</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GestionCommandes</servlet-name>
+    <url-pattern>/GestionCommandes</url-pattern>
+  </servlet-mapping>
 </web-app>

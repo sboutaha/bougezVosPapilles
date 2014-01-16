@@ -1,7 +1,7 @@
 package commandesEnLigne;
 
 
-public class Adresse implements Adresse_itf, MetierElement {
+public class Adresse implements Adresse_itf, MetierElement, java.io.Serializable {
 
 	String ville;
 	String voie;

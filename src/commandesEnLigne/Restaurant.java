@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Restaurant implements Restaurant_itf, MetierElement {
+public class Restaurant implements Restaurant_itf, MetierElement, java.io.Serializable {
 
 	int id;
 	String nom;

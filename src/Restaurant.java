@@ -9,7 +9,7 @@ public class Restaurant implements Restaurant_itf, MetierElement {
 	String telephone;
 	Adresse_itf adresse;
 	int nbPlaces;
-	List<Utilisateur_itf> gerants;
+	List<Gerant_itf> gerants;
 	
 	public Restaurant() {
 		this(-1, new String(), new String(), new Adresse(), 0);
@@ -25,7 +25,7 @@ public class Restaurant implements Restaurant_itf, MetierElement {
 		telephone = tel;
 		adresse = adr;
 		nbPlaces = n;
-		gerants = new ArrayList<Utilisateur_itf>();
+		gerants = new ArrayList<Gerant_itf>();
 	}
 	
 	@Override
@@ -89,25 +89,25 @@ public class Restaurant implements Restaurant_itf, MetierElement {
 	}
 
 	@Override
-	public List<Utilisateur_itf> getGerants() {
+	public List<Gerant_itf> getGerants() {
 		// TODO Auto-generated method stub
 		return gerants;
 	}
 
 	@Override
-	public void setGerants(List<Utilisateur_itf> u) {
+	public void setGerants(List<Gerant_itf> u) {
 		// TODO Auto-generated method stub
 		gerants = u;
 	}
 
 	@Override
-	public boolean addGerant(Utilisateur_itf p) {
+	public boolean addGerant(Gerant_itf p) {
 		// TODO Auto-generated method stub
 		return gerants.add(p);
 	}
 
 	@Override
-	public boolean removeGerant(Utilisateur_itf p) {
+	public boolean removeGerant(Gerant_itf p) {
 		// TODO Auto-generated method stub
 		return gerants.remove(p);
 	}

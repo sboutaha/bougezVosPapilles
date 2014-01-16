@@ -6,12 +6,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//import javax.servlet.http.HttpSession;
-
-//import java.util.Hashtable;
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.Set;
 import javax.ejb.*;
 
 /**
@@ -33,10 +27,14 @@ public class GestionCommandes extends HttpServlet {
 	 */
     @EJB GestionCommandesManagerItf manager;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 
 		Restaurant_itf restaurant;
-		Restaurant_itf resto1 = new Restaurant();
+		Adresse_itf adr1 = new Adresse("rue des Olives", "Toulouse");
+		Restaurant_itf resto1 = new Restaurant(1, "les Délices Du Miel", "0011223344", adr1, 2);
+		manager.initRestaurant();
 		manager.addRestaurant(resto1);
+		
 	if(request.getParameter("page").equals("index")){
 		if(request.getParameter("redirection").equals("connexion")){
 			request.getRequestDispatcher("connexion.jsp").forward(request, response);
@@ -62,7 +60,7 @@ public class GestionCommandes extends HttpServlet {
 		
 		
 	}
-}
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
