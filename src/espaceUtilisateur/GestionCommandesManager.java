@@ -31,19 +31,22 @@ public class GestionCommandesManager implements GestionCommandesManagerItf{
 		//List<Restaurant_itf> tr = ent.createQuery("from restaurant.Restaurant_itf", Restaurant_itf.class).getResultList();
 		return tr;	
 	}
-	public Restaurant_itf getRestaurant(String nom) {
-		return null;
+	public Restaurant_itf getRestaurant(int id) {
+		return tr.get(id);
 	}
 	
 	public void addRestaurant(Restaurant_itf r){
 		//ent.persist(r);
-		tr.put(r);
+		tr.put(r.getId(), r);
 	}
 	
+	public void choisirRestaurant(int id){
+		//ent.persist(r);
+		restaurant = tr.get(id);
+	}
 	public void initRestaurant(){
 		//ent.persist(r);
 		tr = new Hashtable<Integer, Restaurant_itf>();
 	}
 
-	public void 
 }

@@ -13,9 +13,10 @@ import javax.ejb.*;
 public interface GestionCommandesManagerItf {
 
 	Hashtable<Integer, Restaurant_itf> getListeRestaurants();
-	Restaurant_itf getRestaurant(String nom);
+	Restaurant_itf getRestaurant(int id);
 	
 	void addRestaurant(Restaurant_itf r);
 	void initRestaurant();
+	void choisirRestaurant(int id);
 
 }

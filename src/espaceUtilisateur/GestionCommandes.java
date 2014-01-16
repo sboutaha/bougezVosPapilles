@@ -50,10 +50,10 @@ public class GestionCommandes extends HttpServlet {
 		}
 	} else if (request.getParameter("page").equals("listeDesRestaurants")){
 		if(request.getParameter("redirection").equals("menu")){
-			restaurant=manager.getRestaurant(request.getParameter("nomRestaurant"));
+			manager.choisirRestaurant(Integer.parseInt(request.getParameter("idRestaurant")));
 			request.getRequestDispatcher("menu.jsp").forward(request, response);
 		} else if(request.getParameter("redirection").equals("commande")){
-			restaurant=manager.getRestaurant(request.getParameter("nomRestaurant"));
+			manager.choisirRestaurant(Integer.parseInt(request.getParameter("idRestaurant")));
 			request.getRequestDispatcher("commande.jsp").forward(request, response);
 		}
 	} else if (request.getParameter("page").equals("menu")){
