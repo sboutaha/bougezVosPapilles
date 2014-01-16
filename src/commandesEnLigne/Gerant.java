@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public class Gerant extends Utilisateur implements Gerant_itf, MetierElement{
 

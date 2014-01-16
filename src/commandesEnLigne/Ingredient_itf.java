@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public interface Ingredient_itf {
 	public void setNom(String _nom);

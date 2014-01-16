@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public class Horaire implements Horaire_itf, MetierElement {
 

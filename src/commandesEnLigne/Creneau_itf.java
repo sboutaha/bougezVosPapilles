@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public interface Creneau_itf {
 	public Horaire_itf getHeureDebut();

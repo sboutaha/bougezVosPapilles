@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public class Adresse implements Adresse_itf, MetierElement {
 

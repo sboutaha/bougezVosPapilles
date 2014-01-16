@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public class Ingredient implements Ingredient_itf, MetierElement{
 

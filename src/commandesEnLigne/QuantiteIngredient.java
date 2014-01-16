@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public abstract class QuantiteIngredient implements QuantiteIngredient_itf, MetierElement {
 

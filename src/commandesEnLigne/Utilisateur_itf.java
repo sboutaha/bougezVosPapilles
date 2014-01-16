@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public interface Utilisateur_itf {
 	public void setNom(String toto);

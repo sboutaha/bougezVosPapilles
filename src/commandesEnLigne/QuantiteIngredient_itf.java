@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public interface QuantiteIngredient_itf {
 	public int getQuantite();

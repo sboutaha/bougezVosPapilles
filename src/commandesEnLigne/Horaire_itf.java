@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public interface Horaire_itf {
 	public int getHeures();

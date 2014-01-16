@@ -1,3 +1,5 @@
+package commandesEnLigne;
+
 
 public class Utilisateur implements Utilisateur_itf, MetierElement{
 
