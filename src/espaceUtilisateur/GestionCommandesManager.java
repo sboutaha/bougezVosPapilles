@@ -22,12 +22,12 @@ public class GestionCommandesManager implements GestionCommandesManagerItf{
 	//@PersistenceContext
 	//EntityManager ent;
 	
-	Hashtable<Integer,Restaurant_itf> tr;
+	 Hashtable<Integer,Restaurant_itf> tr;
 	
 	Restaurant_itf restaurant;
 
 	//@Override
-	public Hashtable<Integer, Restaurant_itf> getListeRestaurants() {
+	public Hashtable<Integer, Restaurant_itf> getTableRestaurants() {
 		//List<Restaurant_itf> tr = ent.createQuery("from restaurant.Restaurant_itf", Restaurant_itf.class).getResultList();
 		return tr;	
 	}

@@ -12,7 +12,7 @@ import javax.ejb.*;
 @Remote
 public interface GestionCommandesManagerItf {
 
-	Hashtable<Integer, Restaurant_itf> getListeRestaurants();
+	Hashtable<Integer, Restaurant_itf> getTableRestaurants();
 	Restaurant_itf getRestaurant(int id);
 	
 	void addRestaurant(Restaurant_itf r);

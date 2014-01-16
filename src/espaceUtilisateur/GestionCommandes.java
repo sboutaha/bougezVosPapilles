@@ -32,8 +32,12 @@ public class GestionCommandes extends HttpServlet {
 		Restaurant_itf restaurant;
 		Adresse_itf adr1 = new Adresse("rue des Olives", "Toulouse");
 		Restaurant_itf resto1 = new Restaurant(1, "les Délices Du Miel", "0011223344", adr1, 2);
+		Restaurant_itf resto2 = new Restaurant(2, "A la flûte enchantée", "0011223344", adr1, 2);
+		Restaurant_itf resto3 = new Restaurant(3, "Les mille et une nuits", "0011223344", adr1, 1);
 		manager.initRestaurant();
 		manager.addRestaurant(resto1);
+		manager.addRestaurant(resto2);
+		manager.addRestaurant(resto3);
 		
 	if(request.getParameter("page").equals("index")){
 		if(request.getParameter("redirection").equals("connexion")){
@@ -43,7 +47,7 @@ public class GestionCommandes extends HttpServlet {
 				request.getRequestDispatcher("inscription.jsp").forward(request, response);
 			} else{
 				if(request.getParameter("redirection").equals("listeDesRestaurants")){
-					request.setAttribute("listeRestaurants", manager.getListeRestaurants());
+					request.setAttribute("tableRestaurants", manager.getTableRestaurants().values());
 					request.getRequestDispatcher("listeDesRestaurants.jsp").forward(request, response);
 				}
 			}
