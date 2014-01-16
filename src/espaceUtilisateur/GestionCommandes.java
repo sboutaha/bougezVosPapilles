@@ -30,14 +30,15 @@ public class GestionCommandes extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		Restaurant_itf restaurant;
-		Adresse_itf adr1 = new Adresse("rue des Olives", "Toulouse");
-		Restaurant_itf resto1 = new Restaurant(1, "les Délices Du Miel", "0011223344", adr1, 2);
-		Restaurant_itf resto2 = new Restaurant(2, "A la flûte enchantée", "0011223344", adr1, 2);
-		Restaurant_itf resto3 = new Restaurant(3, "Les mille et une nuits", "0011223344", adr1, 1);
+		Restaurant_itf resto1 = new Restaurant(1, "les Délices Du Miel", "0011223344", "rue des Olives, Toulouse", 2);
+		Restaurant_itf resto2 = new Restaurant(2, "A la flûte enchantée", "0011223344", "rue des Olives, Toulouse", 2);
+		Restaurant_itf resto3 = new Restaurant(3, "Les mille et une nuits", "0011223344", "rue du Paprika, Toulouse", 1);
+		Restaurant_itf resto4 = new Restaurant(4, "L'Allocodrome", "0011223344", "rue des Maquis, Toulouse", 10);	
 		manager.initRestaurant();
 		manager.addRestaurant(resto1);
 		manager.addRestaurant(resto2);
 		manager.addRestaurant(resto3);
+		manager.addRestaurant(resto4);
 		
 	if(request.getParameter("page").equals("index")){
 		if(request.getParameter("redirection").equals("connexion")){
