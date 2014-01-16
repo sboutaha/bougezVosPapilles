@@ -35,19 +35,18 @@
 		
 <%! List<PlatPerso_itf> listePlats; %>
 <% listePlats = (List<PlatPerso_itf>) request.getAttribute("listePlats"); %>
-<% for (PlatPerso_itf r : listePlats) { %>
+<% for (PlatPerso_itf p : listePlats) { %>
 		<div class="preamble" id="zen-preamble" role="article">
-			<h3><%=r.getPlat()%><%=r.getPrix()%></h3>
-			<%if(r.getDescription()!=null) {%>
-			<p><%=r.getDescription()%> </p>
+			<h3><%=p.getPlat()%><%=p.getPrix()%></h3>
+			<%if(p.getDescription()!=null) {%>
+			<p><%=p.getDescription()%> </p>
 			<%} %>
 		</div>
 	</section>
-	<% } %>
-<a href=""> Commander <%=r.getNom()%> </a> %>
+<a href=""> Commander <%=p.getPlat().getNom()%> </a>
 <br/>
-<a href=""> Retour <%=r.getNom()%> </a> %>
-
+<a href=""> Retour <%=p.getPlat().getNom()%> </a>
+	<% } %>
 
 <div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
 <div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>

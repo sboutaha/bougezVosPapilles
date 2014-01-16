@@ -32,7 +32,12 @@
 			<p>Une sélection raffinée des meilleurs restaurants de France et pour tous les goûts.</p>
 			
 		</div>
-		
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+														
 <%! Collection<Restaurant_itf> listeRestaurants; %>
 <% listeRestaurants = (Collection<Restaurant_itf>) request.getAttribute("tableRestaurants"); %>
 <% for (Restaurant_itf r : listeRestaurants) { %>
@@ -41,10 +46,10 @@
 			<%if(r.getDescription()!=null) {%>
 			<p><%=r.getDescription()%> </p>
 			<%} %>
-			<a href="GestionCommande?page=listedesRestaurants&redirection=menu&idRestaurant =<%=r.getId()%>"> Consulter le menu du restaurant <%=r.getNom()%> </a>
+			<a href="GestionCommande?page=listedesRestaurants&redirection=menu&idRestaurant =<%=r.getId()%>"> Consulter le menu </a>
 			<br/>
 			<br/>
-			<a href="GestionCommande?page=listedesRestaurants&redirection=commande&idRestaurant =<%=r.getId()%>"> Effectuer une commande au restaurant <%=r.getNom()%> </a>
+			<a href="GestionCommande?page=listedesRestaurants&redirection=commande&idRestaurant =<%=r.getId()%>"> Effectuer une commande </a>
 		
 	</section>
 	<% } %>
