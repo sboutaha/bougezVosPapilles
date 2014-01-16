@@ -9,6 +9,7 @@ public class Restaurant implements Restaurant_itf, MetierElement {
 	int id;
 	String nom;
 	String telephone;
+	String description;
 	Adresse_itf adresse;
 	int nbPlaces;
 	List<Gerant_itf> gerants;
@@ -112,6 +113,10 @@ public class Restaurant implements Restaurant_itf, MetierElement {
 	public boolean removeGerant(Gerant_itf p) {
 		// TODO Auto-generated method stub
 		return gerants.remove(p);
+	}
+	
+	public String getDescription(){
+		return description;
 	}
 
 }
