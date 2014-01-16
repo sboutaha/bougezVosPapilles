@@ -1,4 +1,4 @@
-<%@ page import="java.util.List, commandesEnLigne.Restaurant_itf" %>
+<%@ page import="java.util.List, java.util.Hashtable, java.util.Set, java.util.Collection, commandesEnLigne.Restaurant_itf" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<title>Liste des Restaurants - Bougez Vos Papilles</title>
 
-	<link rel="stylesheet" media="screen" href="C:/Users/sofia/Desktop/projet/menuPrincipal/listeRestaurantDeco.css">
+	<link rel="stylesheet" media="screen" href="listeRestaurantDeco.css">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,19 +33,19 @@
 			
 		</div>
 		
-<%! List<Restaurant_itf> listeRestaurants; %>
-<% listeRestaurants = (List<Restaurant_itf>) request.getAttribute("listeRestaurants"); %>
+<%! Collection<Restaurant_itf> listeRestaurants; %>
+<% listeRestaurants = (Collection<Restaurant_itf>) request.getAttribute("tableRestaurants"); %>
 <% for (Restaurant_itf r : listeRestaurants) { %>
-		<div class="preamble" id="zen-preamble" role="article">
+		
 			<h3><%=r.getNom()%></h3>
 			<%if(r.getDescription()!=null) {%>
 			<p><%=r.getDescription()%> </p>
 			<%} %>
-			<a href="GestionCommande?page=listedesRestaurants&redirection=menu&nomRestaurant =<%=r.getId()%>"> Consulter le menu du restaurant <%=r.getNom()%> </a>
+			<a href="GestionCommande?page=listedesRestaurants&redirection=menu&idRestaurant =<%=r.getId()%>"> Consulter le menu du restaurant <%=r.getNom()%> </a>
 			<br/>
 			<br/>
-			<a href="GestionCommande?page=listedesRestaurants&redirection=commande&nomRestaurant =<%=r.getId()%>"> Effectuer une commande au restaurant <%=r.getNom()%> </a>
-		</div>
+			<a href="GestionCommande?page=listedesRestaurants&redirection=commande&idRestaurant =<%=r.getId()%>"> Effectuer une commande au restaurant <%=r.getNom()%> </a>
+		
 	</section>
 	<% } %>
 

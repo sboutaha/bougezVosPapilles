@@ -78,7 +78,7 @@
 
 	
 	html 							{ background:rgba(118, 61, 41, 0.8);/* bloc extrême gauche */ padding:5%; }
-	body 							{ background:#33CCFF;background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/nourriture.jpg);/*grand bloc*/; color:#FFFFFF; }
+	body 							{ background:#33CCFF;background-image: url(nourriture.jpg);/*grand bloc*/; color:#FFFFFF; }
 	div.page-wrapper 				{ z-index:2; }
 
 	section.intro 					{ padding:5%; }

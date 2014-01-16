@@ -1,7 +1,7 @@
 body{
 	width: 1000px;
 	background-color: #FF6699;
-	background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/dessert.jpg);
+	background-image: url(dessert.jpg);
 	background-position: right;
         background-repeat: repeat-y;
 }

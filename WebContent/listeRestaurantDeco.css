@@ -7,7 +7,7 @@ body {
 	padding: 0;
 	color: #996633;
 	background-color: #330000;
-	background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/res.jpg);
+	background-image: url(res.jpg);
 	background-position: right;
 	background-repeat: repeat-y;
 	font: 11px/1.5 Arial, Verdana, sans-serif;
@@ -17,7 +17,7 @@ body {
 /* Different behaviour of the lady. Just a compromise for IE */
 
 div.extra2 {
-	background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/papierPeint.jpg);
+	background-image: url(papierPeint.jpg);
 	background-repeat: repeat;
 	background-position: left bottom;
 	position: absolute;
@@ -41,20 +41,6 @@ body#css-zen-garden>div.extra2 { /* image principale */
 	z-index: 2;
 }
 
-/* Using Geckos capability of PNG transparency to create the smooth scrolling border,
-when the screen is scrolled and the content vanishes to the left */
-
-body#css-zen-garden>div.extra3 {
-	position: fixed;
-	left: 0;
-	top: 0;
-	height: 100%;
-	z-index: 1;
-	background-image: url(bg_white.png);
-	width: 225px;
-}
-
-/* The Header, using the "old":)) FIR-method */
 
 header {
 	position: relative;
@@ -120,7 +106,7 @@ div.preamble {
 div.preamble h3 {
 	width: 200px;
 	height: 25px;
-	background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/titre.png);
+	background-image: url(titre.png);
 	margin: 0 0 0.5em;
 
 	text-indent: 100%;
@@ -146,7 +132,7 @@ div.explanation {
 div.explanation h3 {
 	width: 200px;
 	height: 25px;
-	background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/titre.png);
+	background-image: url(titre.png);
 	margin: 0 0 0.5em;
 
 	text-indent: 100%;
@@ -191,7 +177,7 @@ div.benefits {
 div.benefits h3 {
 	width: 200px;
 	height: 25px;
-	background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/titre.png);
+	background-image: url(titre.png);
 	margin: 0 0 0.5em;
 
 	text-indent: 100%;
@@ -213,7 +199,7 @@ div.requirements {
 div.requirements h3 {
 	width: 200px;
 	height: 25px;
-	background-image: url(C:/Users/sofia/Desktop/projet/menuPrincipal/titre.png);
+	background-image: url(titre.png);
 	margin: 0 0 0.5em;
 
 	text-indent: 100%;
