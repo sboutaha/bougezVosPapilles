@@ -1,4 +1,4 @@
-<%@ page import="java.util.List, restaurant.Restaurant_itf" %>
+<%@ page import="java.util.List, commandesEnLigne.Restaurant_itf" %>
 
 <!DOCTYPE html>
 <html lang="en">
