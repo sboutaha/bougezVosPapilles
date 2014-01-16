@@ -1,5 +1,6 @@
-package restaurant;
+package espaceUtilisateur;
 
+import commandesEnLigne.*;
 import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

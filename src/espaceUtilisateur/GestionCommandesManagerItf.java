@@ -1,5 +1,6 @@
-package restaurant;
+package espaceUtilisateur;
 
+import commandesEnLigne.*;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.ArrayList;
