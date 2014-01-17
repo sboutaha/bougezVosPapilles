@@ -1,4 +1,4 @@
-<%@ page import="java.util.List, commandesEnLigne.PlatPerso_itf" %>
+<%@ page import="java.util.List, commandesEnLigne.*" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,14 +27,17 @@
 		<header role="banner">
 			<h1></h1>
 		</header>
+		
+<%! Restaurant_itf restaurant; %>
+<% restaurant = (Restaurant_itf) request.getAttribute("restaurant"); %>
 
 		<div class="summary" id="zen-summary" role="article">
-			<p>Une sélection raffinée des meilleurs restaurants de France et pour tous les goûts.</p>
+			<p>LA CARTE</p>
 			
 		</div>
 		
 <%! List<PlatPerso_itf> listePlats; %>
-<% listePlats = (List<PlatPerso_itf>) request.getAttribute("listePlats"); %>
+<% listePlats = restaurant.getCarte(); %>
 <% for (PlatPerso_itf p : listePlats) { %>
 		<div class="preamble" id="zen-preamble" role="article">
 			<h3><%=p.getPlat()%><%=p.getPrix()%></h3>
