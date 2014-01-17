@@ -15,13 +15,13 @@ public class Ingredient implements Ingredient_itf, MetierElement{
 	
 	@Override
 	public void setNom(String _nom) {
-		// TODO Auto-generated method stub
+		
 		nom = _nom;
 	}
 
 	@Override
 	public String getNom() {
-		// TODO Auto-generated method stub
+	
 		return nom;
 	}
 

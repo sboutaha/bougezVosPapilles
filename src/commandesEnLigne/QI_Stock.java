@@ -5,9 +5,11 @@ public class QI_Stock extends QuantiteIngredient {
 	
 	Restaurant_itf restaurant;
 	
-	/*public Restaurant getRestaurant() {
+	public Restaurant_itf getRestaurant() {
 		return restaurant;
 	}
-	public void setRestaurant(int q);
-*/
+	public void setRestaurant(Restaurant r){
+		restaurant = r;
+	}
+
 }

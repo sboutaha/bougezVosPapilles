@@ -1,22 +1,25 @@
 package commandesEnLigne;
 
+import javax.persistence.*;
 
+@Entity
 public class Gerant extends Utilisateur implements Gerant_itf, MetierElement{
 
+	@OneToOne
 	Restaurant_itf restaurant;
 	
 	public String toString() {
-		return "Gerant restaurant: " + getRestaurant() + "identifiant " + getNom();
+		return "Gerant restaurant: " + getRestaurant() + "identifiant " + getIdentifiant();
 	}
 	@Override
 	public void setRestaurant(Restaurant_itf r) {
-		// TODO Auto-generated method stub
+		
 		restaurant = r;
 	}
 
 	@Override
 	public Restaurant_itf getRestaurant() {
-		// TODO Auto-generated method stub
+		
 		return restaurant;
 	}
 

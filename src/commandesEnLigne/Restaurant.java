@@ -1,122 +1,201 @@
 package commandesEnLigne;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.*;
 
-public class Restaurant implements Restaurant_itf, MetierElement, java.io.Serializable {
+@Entity
+public class Restaurant implements Restaurant_itf, MetierElement, Serializable {
 
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int id;
 	String nom;
 	String telephone;
-	String description;
-	Adresse_itf adresse;
+	String adresse;
+	String ville;
 	int nbPlaces;
+	String description;
+	@OneToMany
 	List<Gerant_itf> gerants;
+	@OneToMany
+	List<PlatPerso_itf> carte;
+	@OneToMany
+	List<QI_Stock> stock;
+	@OneToMany
+	List<Creneau_itf> ouvertA;
+	@OneToMany
+	List<Commande_itf> commandes;
+	
 	
 	public Restaurant() {
-		this(-1, new String(), new String(), new Adresse(), 0);
+		gerants = new ArrayList<Gerant_itf>();
+		carte = new ArrayList<PlatPerso_itf>() ;
+		stock = new ArrayList<QI_Stock>() ;
+		ouvertA = new ArrayList<Creneau_itf>() ;
+		commandes = new ArrayList<Commande_itf>();
 	}
 	
-	public Restaurant(int _id) {
+	public Restaurant(int _id, String _nom) {
 		this();
 		id = _id;
-	}
-	public Restaurant(int _id,	String _nom, String tel, Adresse_itf adr, int n) {
-		id = _id;
-		nom = _nom;
-		telephone = tel;
-		adresse = adr;
-		nbPlaces = n;
-		gerants = new ArrayList<Gerant_itf>();
+		nom= _nom;
 	}
 	
 	@Override
 	public int getId() {
-		// TODO Auto-generated method stub
 		return id;
 	}
 
 	@Override
 	public void setId(int _id) {
-		// TODO Auto-generated method stub
 		id = _id;
 	}
 
 	@Override
 	public String getNom() {
-		// TODO Auto-generated method stub
 		return nom;
 	}
 
 	@Override
 	public void setNom(String _nom) {
-		// TODO Auto-generated method stub
-		nom = _nom;
+		nom = _nom;	
 	}
 
 	@Override
 	public String getTelephone() {
-		// TODO Auto-generated method stub
 		return telephone;
 	}
 
 	@Override
 	public void setTelephone(String _telephone) {
-		// TODO Auto-generated method stub
 		telephone = _telephone;
 	}
 
 	@Override
-	public Adresse_itf getAdresse() {
-		// TODO Auto-generated method stub
+	public String getAdresse() {
 		return adresse;
 	}
 
 	@Override
-	public void setAdresse(Adresse_itf _adresse) {
-		// TODO Auto-generated method stub
+	public void setAdresse(String _adresse) {
 		adresse = _adresse;
 	}
 
 	@Override
 	public int getNbPlaces() {
-		// TODO Auto-generated method stub
+		
 		return nbPlaces;
 	}
 
 	@Override
 	public void setNbPlaces(int n) {
-		// TODO Auto-generated method stub
 		nbPlaces = n;
+		
+	}
+	
+	@Override
+	public String getVille() {
+		return ville;
+	}
+	
+	@Override
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+	
+	@Override
+	public List<PlatPerso_itf> getCarte() {
+		return carte;
+	}
+	
+	@Override
+	public void setCarte(List<PlatPerso_itf> carte) {
+		this.carte = carte;
+	}
+	
+	@Override
+	public List<QI_Stock> getStock() {
+		return stock;
+	}
+
+	@Override
+	public void setStock(List<QI_Stock> stock) {
+		this.stock = stock;
+	}
+	
+	@Override
+	public boolean addStockItem(QI_Stock q) {
+		return stock.add(q);
+	}
+
+	@Override
+	public boolean removeStockItem(QI_Stock q) {
+		return stock.remove(q);
+	}
+
+	@Override
+	public List<Creneau_itf> getOuvertA() {
+		return ouvertA;
+	}
+	
+	@Override
+	public void setOuvertA(List<Creneau_itf> ouvertA) {
+		this.ouvertA = ouvertA;
+	}
+	
+	@Override
+	public List<Commande_itf> getCommandes() {
+		return commandes;
+	}
+	
+	@Override
+	public void setCommandes(List<Commande_itf> commandes) {
+		this.commandes = commandes;
+	}
+	
+	@Override
+	public void setDescription(String description) {
+		description = description;
+	}
+	
+	@Override
+	public String getDescription() {
+		return description;
 	}
 
 	@Override
 	public List<Gerant_itf> getGerants() {
-		// TODO Auto-generated method stub
 		return gerants;
 	}
 
 	@Override
 	public void setGerants(List<Gerant_itf> u) {
-		// TODO Auto-generated method stub
 		gerants = u;
 	}
 
 	@Override
 	public boolean addGerant(Gerant_itf p) {
-		// TODO Auto-generated method stub
-		return gerants.add(p);
+		return this.getGerants().add(p);
 	}
 
 	@Override
 	public boolean removeGerant(Gerant_itf p) {
-		// TODO Auto-generated method stub
+		
 		return gerants.remove(p);
 	}
-	
-	public String getDescription(){
-		return description;
+
+
+	public String toString(){
+		return "Restaurant "+ nom + "\n"+ 
+			"Situé à l'adresse : "+adresse + " "+ville + "\n" +
+			" Numéro de Téléphone : "+ telephone +"\n"+
+			" Nombre de places : " + nbPlaces;
 	}
 
 }

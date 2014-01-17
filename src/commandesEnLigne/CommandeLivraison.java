@@ -5,22 +5,22 @@ import java.util.List;
 
 public class CommandeLivraison extends Commande {
 
-	Adresse adresse;
+	String adresse;
 	
-	public CommandeLivraison(Utilisateur_itf c, Restaurant_itf r, List<PlatPerso_itf> p, Adresse a) {
+	public CommandeLivraison(Utilisateur_itf c, Restaurant_itf r, List<PlatPerso_itf> p, String a) {
 		super(c, r, p);
 		adresse = a;
 	}
-	public void setAdresse(Adresse a) {
+	public void setAdresse(String a) {
 		adresse = a;
 	}
 	
-	public Adresse getAdresse() {
+	public String getAdresse() {
 		return adresse;
 	}
 	@Override
 	public int getType() {
-		// TODO Auto-generated method stub
+		
 		return Commande_itf.LIVRAISON;
 	}
 
